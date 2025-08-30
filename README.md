@@ -9,7 +9,7 @@ A Python web scraper that monitors Hannaford.com for apple deals and sends email
 - 📧 Sends email notifications via Gmail SMTP relay
 - 🍂 Seasonal mode - only runs during apple season (Aug-Oct)
 - 🔄 Retry logic with exponential backoff for reliability
-- 🛡️ Bot protection bypass using curl (for stubborn containers)
+- 🛡️ Curl version included if Python requests fails
 
 ## 🚀 Quick Start
 
@@ -34,15 +34,14 @@ A Python web scraper that monitors Hannaford.com for apple deals and sends email
    # Standard version (uses Python requests)
    python3 apple-alert.py
    
-   # Curl version (for containers with bot detection issues)
+   # Curl version (in case Python requests does not work)
    python3 apple-alert-curl.py
    ```
 
 ## 📁 Files
 
 - **`apple-alert.py`** - Main script using Python requests library
-- **`apple-alert-curl.py`** - Alternative version using curl (bypasses bot detection)
-
+- **`apple-alert-curl.py`** - Alternative version using curl
 ## ⚙️ Configuration
 
 Edit the configuration section at the top of either script:
@@ -77,8 +76,8 @@ CRON_TZ=America/New_York
 ## 🐛 Troubleshooting
 
 ### "Read timed out" errors in containers
-- Use `apple-alert-curl.py` instead - it bypasses Python requests bot detection
-- The curl version works better in Docker containers and cloud environments
+- Use `apple-alert-curl.py` instead
+- The curl version seems to work better in Docker containers and cloud environments
 
 ### No apple products found
 - Website structure may have changed
