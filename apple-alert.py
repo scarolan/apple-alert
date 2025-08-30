@@ -32,7 +32,7 @@ def in_season():
     return now.month in SEASON_MONTHS
 
 def search_hannaford_apples():
-    """Search Hannaford.com for apple products with enhanced bot protection bypass"""
+    """Search Hannaford.com for apple products"""
     search_url = "https://www.hannaford.com/search/product"
     params = {
         "form_state": "searchForm",
