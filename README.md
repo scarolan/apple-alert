@@ -126,7 +126,7 @@ Feel free to submit issues and pull requests! Some ideas for improvements:
 
 ## 📄 License
 
-MIT License - feel free to use and modify as needed!
+Apache 2.0 License - feel free to use and modify as needed!
 
 ---
 
